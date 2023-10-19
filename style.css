@@ -1,0 +1,61 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5e8d7; /* A beige color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Fill the viewport height */
+}
+
+.container {
+    background-color: #ffffff; /* White background */
+    width: 80%; /* Adjust based on your preference */
+    max-width: 800px; /* Max width for larger screens */
+    padding: 50px; /* Some spacing around the content */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow to give depth */
+    border-radius: 5px; /* Soften the corners */
+}
+
+/* Image of the cupcake */
+.cupcake {
+    width: 100%; /* Make it responsive */
+    max-width: 250px; /* Limit the width */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Engaging headline */
+.headline {
+    font-size: 2em; /* 2 times the base font size */
+    color: #000;
+    text-align: center;
+    margin-top: 20px; /* Spacing */
+}
+
+/* Subtext */
+.subtext {
+    color: #888888; /* Grayish color */
+    text-align: center;
+    margin-top: 10px; /* Spacing */
+}
+
+/* Call To Action (CTA) button */
+.cta-button {
+    display: block;
+    background-color: #ff3366; /* A shade of red */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    margin: 30px auto 0; /* Spacing and centering */
+    cursor: pointer; /* Pointer on hover */
+    text-decoration: none; /* If you use an 'a' tag */
+}
+
+.cta-button:hover {
+    background-color: #ff0055; /* A darker shade for hover */
+}

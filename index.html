@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Take Your IQ Test!</h1>
+<p>Note: This free, certified IQ Test gives you a real IQ score in just minutes.</p>
+
+<button onclick="generateIQ()">Test My IQ!</button>
+
+<h2 id="result"></h2>
+
+<button id="shareBtn" onclick="shareResult()" style="display:none;">Share on Socials</button>
+
+<script>
+    function generateIQ() {
+        const randomNumber = Math.floor(Math.random() * 2);
+        
+        let resultText = '';
+        
+        if(randomNumber === 0) {
+            resultText = `negative`;
+        } else {
+            resultText = `positive`;
+        }
+        
+        document.getElementById("result").innerText = 'Your IQ is '+ resultText;
+        document.getElementById("shareBtn").style.display = "block";
+        
+        return resultText;
+    }
+
+    function shareResult() {
+        const result = document.getElementById("result").innerText;
+        const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent("My IQ is " + generateIQ() + " - take your IQ test!")}`;
+
+        window.open(tweetUrl);
+    }
+</script>
+
+</body>
+</html>
