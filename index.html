@@ -29,7 +29,7 @@
             resultText = `positive`;
         }
         
-        document.getElementById("result").innerText = 'Your IQ is '+ resultText;
+        document.getElementById("result").innerText = 'Your IQ is '+ resultText + '!';
         document.getElementById("shareBtn").style.display = "block";
         
         return resultText;
@@ -37,10 +37,11 @@
 
     function shareResult() {
         const result = document.getElementById("result").innerText;
-        const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent("My IQ is " + generateIQ() + " - take your IQ test!")}`;
+        const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent("I got: " + result + " - take your IQ test! https://iq-test-kappa.vercel.app/")}`;
 
         window.open(tweetUrl);
     }
+    
 </script>
 
 </body>
